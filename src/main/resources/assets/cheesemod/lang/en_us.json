@@ -1,0 +1,10 @@
+{
+  "item.cheesemod.black_pepper": "Black Pepper",
+  "item.cheesemod.salt": "Salt",
+  "item.cheesemod.raw_cheese_ball": "Raw Cheese Ball",
+  "item.cheesemod.cheese_template": "Cheese Template",
+
+  "block.cheesemod.salt_block": "Salt Block",
+
+  "itemgroups.items": "Cheese Mod Items"
+}
