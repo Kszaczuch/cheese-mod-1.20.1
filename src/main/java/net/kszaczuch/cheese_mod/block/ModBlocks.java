@@ -15,6 +15,8 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static Block SALT_BLOCK = registerBlock("salt_block",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
+    public static Block SALT_ORE = registerBlock("salt_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
 
 
     private static Block registerBlock(String name, Block block) {

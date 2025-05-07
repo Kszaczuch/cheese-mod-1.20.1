@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.kszaczuch.cheese_mod.block.ModBlocks;
 import net.kszaczuch.cheese_mod.item.ModItemGroups;
 import net.kszaczuch.cheese_mod.item.ModItems;
+import net.kszaczuch.cheese_mod.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,5 +20,7 @@ public class CheeseMod implements ModInitializer {
 		ModItems.registerModItems();
 		ModItemGroups.registerModItemGroups();
 		ModBlocks.registerModBlocks();
+
+		ModWorldGeneration.generateModWorldGen();
 	}
 }
