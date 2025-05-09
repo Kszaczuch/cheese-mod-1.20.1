@@ -1,3 +1,4 @@
-// 1.20.1	2025-05-07T19:53:58.9725854	Cheese Mod/Block Loot Tables
+// 1.20.1	2025-05-09T14:27:49.5267496	Cheese Mod/Block Loot Tables
 19bad4c93f49e31c3b9a311e324a63d19e2af331 data\cheesemod\loot_tables\blocks\salt_block.json
 9b57a99370561bb34d91d2946e862d5eacd6eb1b data\cheesemod\loot_tables\blocks\salt_ore.json
+4d822e34cfec32835d2cf3bf7d5745c3e8eac00c data\cheesemod\loot_tables\blocks\black_pepper_crop.json

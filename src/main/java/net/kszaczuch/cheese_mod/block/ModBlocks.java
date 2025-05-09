@@ -3,6 +3,7 @@ package net.kszaczuch.cheese_mod.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.kszaczuch.cheese_mod.CheeseMod;
+import net.kszaczuch.cheese_mod.block.custom.BlackPepperCropBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.GlassBlock;
@@ -13,11 +14,13 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
-    public static Block SALT_BLOCK = registerBlock("salt_block",
+    public static final Block SALT_BLOCK = registerBlock("salt_block",
             new GlassBlock(FabricBlockSettings.copyOf(Blocks.GLASS).nonOpaque()));
-    public static Block SALT_ORE = registerBlock("salt_ore",
+    public static final Block SALT_ORE = registerBlock("salt_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.DIAMOND_ORE)));
 
+    public static final Block BLACK_PEPPER_CROP = Registry.register(Registries.BLOCK, new Identifier(CheeseMod.MOD_ID, "black_pepper_crop"),
+            new BlackPepperCropBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

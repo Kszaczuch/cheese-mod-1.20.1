@@ -10,5 +10,7 @@ public class CheeseModClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SALT_BLOCK, RenderLayer.getTranslucent());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLACK_PEPPER_CROP, RenderLayer.getCutout());
+
     }
 }
