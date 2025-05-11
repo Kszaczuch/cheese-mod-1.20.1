@@ -25,6 +25,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.SALT_BLOCK);
+        addDrop(ModBlocks.GOUDA_CHEESE_WHEEL);
+        addDrop(ModBlocks.SMOKED_GOUDA_CHEESE_WHEEL);
+        addDrop(ModBlocks.CHEDDAR_CHEESE_WHEEL);
+        addDrop(ModBlocks.SMOKED_CHEDDAR_CHEESE_WHEEL);
+        addDrop(ModBlocks.AGED_CHEDDAR_CHEESE_WHEEL);
+        addDrop(ModBlocks.PARMESAN_CHEESE_WHEEL);
 
         addDrop(ModBlocks.SALT_ORE, saltOreDrops(ModBlocks.SALT_ORE, ModItems.SALT));
 

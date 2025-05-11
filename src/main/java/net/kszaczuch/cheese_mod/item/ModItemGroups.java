@@ -2,6 +2,7 @@ package net.kszaczuch.cheese_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.kszaczuch.cheese_mod.CheeseMod;
+import net.kszaczuch.cheese_mod.block.ModBlocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -18,6 +19,20 @@ public class ModItemGroups {
                         entries.add(ModItems.SALT);
                         entries.add(ModItems.RAW_CHEESE_BALL);
                         entries.add(ModItems.CHEESE_TEMPLATE);
+                        entries.add(ModBlocks.SALT_ORE);
+                        entries.add(ModBlocks.SALT_BLOCK);
+                        entries.add(ModBlocks.GOUDA_CHEESE_WHEEL);
+                        entries.add(ModItems.GOUDA_SLICE);
+                        entries.add(ModBlocks.SMOKED_GOUDA_CHEESE_WHEEL);
+                        entries.add(ModItems.SMOKED_GOUDA_SLICE);
+                        entries.add(ModBlocks.CHEDDAR_CHEESE_WHEEL);
+                        entries.add(ModItems.CHEDDAR_SLICE);
+                        entries.add(ModBlocks.SMOKED_CHEDDAR_CHEESE_WHEEL);
+                        entries.add(ModItems.SMOKED_CHEDDAR_SLICE);
+                        entries.add(ModBlocks.AGED_CHEDDAR_CHEESE_WHEEL);
+                        entries.add(ModItems.AGED_CHEDDAR_SLICE);
+                        entries.add(ModBlocks.PARMESAN_CHEESE_WHEEL);
+                        entries.add(ModItems.PARMESAN_SLICE);
     }).build());
     public static void registerModItemGroups() {
         CheeseMod.LOGGER.info("Registering Mod Item Groups");

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smoked_gouda_cheese_wheel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cheesemod:smoked_gouda_cheese_wheel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:smoked_gouda_slice"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_smoked_gouda_cheese_wheel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:smoked_gouda_slice"
+    ]
+  },
+  "sends_telemetry_event": false
+}

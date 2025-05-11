@@ -13,9 +13,17 @@ public class ModItems {
     public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings()));
     public static final Item RAW_CHEESE_BALL = registerItem("raw_cheese_ball", new Item(new FabricItemSettings()));
     public static final Item CHEESE_TEMPLATE = registerItem("cheese_template", new Item(new FabricItemSettings()));
+    public static final Item CHEESE_TEMPLATE_WITH_CHEESE = registerItem("cheese_template_with_cheese", new Item(new FabricItemSettings()));
 
     public static final Item BLACK_PEPPER = registerItem("black_pepper",
             new AliasedBlockItem(ModBlocks.BLACK_PEPPER_CROP, new FabricItemSettings()));
+
+    public static final Item GOUDA_SLICE = registerItem("gouda_slice", new Item(new FabricItemSettings().food(ModFoodComponents.GOUDA_SLICE)));
+    public static final Item SMOKED_GOUDA_SLICE = registerItem("smoked_gouda_slice", new Item(new FabricItemSettings().food(ModFoodComponents.SMOKED_GOUDA_SLICE)));
+    public static final Item CHEDDAR_SLICE = registerItem("cheddar_slice", new Item(new FabricItemSettings().food(ModFoodComponents.CHEDDAR_SLICE )));
+    public static final Item SMOKED_CHEDDAR_SLICE = registerItem("smoked_cheddar_slice", new Item(new FabricItemSettings().food(ModFoodComponents.SMOKED_CHEDDAR_SLICE)));
+    public static final Item AGED_CHEDDAR_SLICE = registerItem("aged_cheddar_slice", new Item(new FabricItemSettings().food(ModFoodComponents.AGED_CHEDDAR_SLICE)));
+    public static final Item PARMESAN_SLICE = registerItem("parmesan_slice", new Item(new FabricItemSettings().food(ModFoodComponents.PARMESAN_SLICE)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(CheeseMod.MOD_ID, name), item);

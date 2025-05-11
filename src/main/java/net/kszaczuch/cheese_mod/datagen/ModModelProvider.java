@@ -28,5 +28,12 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SALT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_CHEESE_BALL, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHEESE_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHEESE_TEMPLATE_WITH_CHEESE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.GOUDA_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SMOKED_GOUDA_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHEDDAR_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SMOKED_CHEDDAR_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.AGED_CHEDDAR_SLICE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PARMESAN_SLICE, Models.GENERATED);
     }
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_parmesan_cheese_wheel": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cheesemod:parmesan_cheese_wheel"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:parmesan_slice"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_parmesan_cheese_wheel",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:parmesan_slice"
+    ]
+  },
+  "sends_telemetry_event": false
+}

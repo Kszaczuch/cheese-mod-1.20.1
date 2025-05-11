@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cheesemod:aged_cheddar_cheese_wheel"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "cheesemod:aged_cheddar_slice"
+  }
+}
