@@ -90,9 +90,11 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHEESE_TEMPLATE, 4)
                 .pattern("P P")
-                .pattern("PPP")
+                .pattern("SSS")
                 .input('P', ItemTags.PLANKS)
+                .input('S', ItemTags.WOODEN_SLABS)
                 .criterion("has_planks", conditionsFromTag(ItemTags.PLANKS))
+                .criterion("has_slabs", conditionsFromTag(ItemTags.WOODEN_SLABS))
                 .offerTo(consumer, new Identifier(getRecipeName(ModItems.CHEESE_TEMPLATE)));
     }
 }
