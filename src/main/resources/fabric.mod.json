@@ -20,6 +20,9 @@
 		],
 		"fabric-datagen": [
 			"net.kszaczuch.cheese_mod.CheeseModDataGenerator"
+		],
+		"rei_client": [
+			"net.kszaczuch.cheese_mod.compat.CheeseModREIClientPlugin"
 		]
 	},
 	"mixins": [

@@ -1,0 +1,61 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cheesemod:black_pepper"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_raw_cheese_ball": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cheesemod:raw_cheese_ball"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_salt": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cheesemod:salt"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:raw_cheddar_cheese_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_cheese_ball",
+      "has_salt",
+      "has_black_pepper",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:raw_cheddar_cheese_ball"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -18,7 +18,10 @@ public class ModItemGroups {
                         entries.add(ModItems.BLACK_PEPPER);
                         entries.add(ModItems.SALT);
                         entries.add(ModItems.RAW_CHEESE_BALL);
+                        entries.add(ModItems.RAW_CHEDDAR_CHEESE_BALL);
                         entries.add(ModItems.CHEESE_TEMPLATE);
+                        entries.add(ModItems.CHEESE_TEMPLATE_WITH_CHEESE);
+                        entries.add(ModItems.CHEESE_TEMPLATE_WITH_CHEDDAR_CHEESE);
                         entries.add(ModBlocks.SALT_ORE);
                         entries.add(ModBlocks.SALT_BLOCK);
                         entries.add(ModBlocks.GOUDA_CHEESE_WHEEL);

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 9000,
+  "experience": 0.0,
+  "group": "cheese",
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
+  "result": "cheesemod:raw_cheese_ball"
+}

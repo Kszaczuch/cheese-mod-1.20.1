@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 18000,
+  "experience": 5.0,
+  "group": "cheese",
+  "ingredient": {
+    "item": "cheesemod:gouda_cheese_wheel"
+  },
+  "result": "cheesemod:parmesan_cheese_wheel"
+}

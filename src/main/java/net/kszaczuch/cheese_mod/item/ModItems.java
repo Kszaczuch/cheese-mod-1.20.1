@@ -12,8 +12,10 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item SALT = registerItem("salt", new Item(new FabricItemSettings()));
     public static final Item RAW_CHEESE_BALL = registerItem("raw_cheese_ball", new Item(new FabricItemSettings()));
+    public static final Item RAW_CHEDDAR_CHEESE_BALL = registerItem("raw_cheddar_cheese_ball", new Item(new FabricItemSettings()));
     public static final Item CHEESE_TEMPLATE = registerItem("cheese_template", new Item(new FabricItemSettings()));
     public static final Item CHEESE_TEMPLATE_WITH_CHEESE = registerItem("cheese_template_with_cheese", new Item(new FabricItemSettings()));
+    public static final Item CHEESE_TEMPLATE_WITH_CHEDDAR_CHEESE = registerItem("cheese_template_with_cheddar_cheese", new Item(new FabricItemSettings()));
 
     public static final Item BLACK_PEPPER = registerItem("black_pepper",
             new AliasedBlockItem(ModBlocks.BLACK_PEPPER_CROP, new FabricItemSettings()));

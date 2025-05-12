@@ -4,14 +4,17 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.kszaczuch.cheese_mod.block.ModBlocks;
 import net.kszaczuch.cheese_mod.item.ModItems;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
-import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.*;
+import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.RecipeSerializer;
 import net.minecraft.recipe.ShapelessRecipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
+import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -19,8 +22,26 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         super(output);
     }
 
+    private static void offerSmoking(Consumer<RecipeJsonProvider> consumer, List<ItemConvertible> inputs, RecipeCategory category, ItemConvertible output, float experience, int cookingTime, String group) {
+        for (ItemConvertible input : inputs) {
+            CookingRecipeJsonBuilder.create(Ingredient.ofItems(input), category, output, experience, cookingTime, RecipeSerializer.SMOKING)
+                    .createSmoking(Ingredient.ofItems(input), category, output, experience, cookingTime)
+                    .group(group)
+                    .criterion(FabricRecipeProvider.hasItem(input), FabricRecipeProvider.conditionsFromItem(input))
+                    .offerTo(consumer, new Identifier(FabricRecipeProvider.getRecipeName(output) + "_from_smoking_" + FabricRecipeProvider.getRecipeName(input)));
+        }
+    }
+
     @Override
     public void generate(Consumer<RecipeJsonProvider> consumer) {
+        offerSmelting(consumer, List.of(Items.MILK_BUCKET), RecipeCategory.FOOD, ModItems.RAW_CHEESE_BALL, 0f, 9000, "cheese");
+        offerSmelting(consumer, List.of(ModItems.CHEESE_TEMPLATE_WITH_CHEESE), RecipeCategory.FOOD, ModBlocks.GOUDA_CHEESE_WHEEL, 5.0f, 18000, "cheese");
+        offerSmelting(consumer, List.of(ModBlocks.GOUDA_CHEESE_WHEEL), RecipeCategory.FOOD, ModBlocks.PARMESAN_CHEESE_WHEEL, 5.0f, 18000, "cheese");
+        offerSmelting(consumer, List.of(ModItems.CHEESE_TEMPLATE_WITH_CHEDDAR_CHEESE), RecipeCategory.FOOD, ModBlocks.CHEDDAR_CHEESE_WHEEL, 5.0f, 18000, "cheese");
+        offerSmelting(consumer, List.of(ModBlocks.CHEDDAR_CHEESE_WHEEL), RecipeCategory.FOOD, ModBlocks.AGED_CHEDDAR_CHEESE_WHEEL, 5.0f, 18000, "cheese");
+        offerSmoking(consumer, List.of(ModBlocks.GOUDA_CHEESE_WHEEL), RecipeCategory.FOOD, ModBlocks.SMOKED_GOUDA_CHEESE_WHEEL, 5.0f, 9000, "cheese");
+        offerSmoking(consumer, List.of(ModBlocks.CHEDDAR_CHEESE_WHEEL), RecipeCategory.FOOD, ModBlocks.SMOKED_CHEDDAR_CHEESE_WHEEL, 5.0f, 9000, "cheese");
+
         offerReversibleCompactingRecipes(consumer, RecipeCategory.BUILDING_BLOCKS, ModItems.SALT, RecipeCategory.MISC, ModBlocks.SALT_BLOCK);
         ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.GOUDA_SLICE, 4)
                         .input(ModBlocks.GOUDA_CHEESE_WHEEL)
@@ -52,6 +73,20 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CHEESE_TEMPLATE), conditionsFromItem(ModItems.CHEESE_TEMPLATE))
                         .criterion(hasItem(ModItems.RAW_CHEESE_BALL), conditionsFromItem(ModItems.RAW_CHEESE_BALL))
                         .offerTo(consumer, new Identifier(getRecipeName(ModItems.CHEESE_TEMPLATE_WITH_CHEESE)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.RAW_CHEDDAR_CHEESE_BALL)
+                        .input(ModItems.RAW_CHEESE_BALL)
+                        .input(ModItems.SALT)
+                        .input(ModItems.BLACK_PEPPER)
+                        .criterion(hasItem(ModItems.RAW_CHEESE_BALL), conditionsFromItem(ModItems.RAW_CHEESE_BALL))
+                        .criterion(hasItem(ModItems.SALT), conditionsFromItem(ModItems.SALT))
+                        .criterion(hasItem(ModItems.BLACK_PEPPER), conditionsFromItem(ModItems.BLACK_PEPPER))
+                        .offerTo(consumer, new Identifier(getRecipeName(ModItems.RAW_CHEDDAR_CHEESE_BALL)));
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.FOOD, ModItems.CHEESE_TEMPLATE_WITH_CHEDDAR_CHEESE)
+                        .input(ModItems.CHEESE_TEMPLATE)
+                        .input(ModItems.RAW_CHEDDAR_CHEESE_BALL)
+                        .criterion(hasItem(ModItems.CHEESE_TEMPLATE), conditionsFromItem(ModItems.CHEESE_TEMPLATE))
+                        .criterion(hasItem(ModItems.RAW_CHEDDAR_CHEESE_BALL), conditionsFromItem(ModItems.RAW_CHEDDAR_CHEESE_BALL))
+                        .offerTo(consumer, new Identifier(getRecipeName(ModItems.CHEESE_TEMPLATE_WITH_CHEDDAR_CHEESE)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.CHEESE_TEMPLATE, 4)
                 .pattern("P P")

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "cheesemod:raw_cheese_ball"
+    },
+    {
+      "item": "cheesemod:salt"
+    },
+    {
+      "item": "cheesemod:black_pepper"
+    }
+  ],
+  "result": {
+    "item": "cheesemod:raw_cheddar_cheese_ball"
+  }
+}

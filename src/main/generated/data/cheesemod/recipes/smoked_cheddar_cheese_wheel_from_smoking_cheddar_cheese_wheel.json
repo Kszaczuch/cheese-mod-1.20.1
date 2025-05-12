@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "cookingtime": 9000,
+  "experience": 5.0,
+  "group": "cheese",
+  "ingredient": {
+    "item": "cheesemod:cheddar_cheese_wheel"
+  },
+  "result": "cheesemod:smoked_cheddar_cheese_wheel"
+}
