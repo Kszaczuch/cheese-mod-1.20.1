@@ -2,9 +2,27 @@
   "item.cheesemod.black_pepper": "Black Pepper",
   "item.cheesemod.salt": "Salt",
   "item.cheesemod.raw_cheese_ball": "Raw Cheese Ball",
+  "item.cheesemod.raw_cheddar_cheese_ball": "Raw Cheddar Cheese Ball",
   "item.cheesemod.cheese_template": "Cheese Template",
+  "item.cheesemod.cheese_template_with_cheese": "Cheese Template With Cheese",
+  "item.cheesemod.cheese_template_with_cheddar_cheese": "Cheese Template With Cheddar Cheese",
+
+  "item.cheesemod.gouda_slice": "Gouda Slice",
+  "item.cheesemod.smoked_gouda_slice": "Smoked Gouda Slice",
+  "item.cheesemod.cheddar_slice": "Cheddar Slice",
+  "item.cheesemod.smoked_cheddar_slice": "Smoked Cheddar Slice",
+  "item.cheesemod.aged_cheddar_slice": "Aged Cheddar Slice",
+  "item.cheesemod.parmesan_slice": "Parmesan Slice",
 
   "block.cheesemod.salt_block": "Salt Block",
+  "block.cheesemod.salt_ore": "Salt Ore",
+
+  "block.cheesemod.gouda_cheese_wheel": "Gouda Cheese Wheel",
+  "block.cheesemod.smoked_gouda_cheese_wheel": "Smoked Gouda Cheese Wheel",
+  "block.cheesemod.cheddar_cheese_wheel": "Cheddar Cheese Wheel",
+  "block.cheesemod.smoked_cheddar_cheese_wheel": "Smoked Cheddar Cheese Wheel",
+  "block.cheesemod.aged_cheddar_cheese_wheel": "Aged Cheddar Cheese Wheel",
+  "block.cheesemod.parmesan_cheese_wheel": "Parmesan Cheese Wheel",
 
   "itemgroups.items": "Cheese Mod Items"
 }
